@@ -322,7 +322,7 @@ export default function Stats({ address, userAddress }: StatsProps) {
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-gray-200">
+                      <tbody className="divide-y divide-gray-20 overflow-y-scroll">
                         {tokensBalance && !loadingAsset ? (
 
 
@@ -330,7 +330,6 @@ export default function Stats({ address, userAddress }: StatsProps) {
                             {tokensBalance.map((t) => (
 
                               <>
-                                <>{t.balance}</>
                                 {t.balance > 0 &&
                                   <tr key={t.token_id}>
                                     <td className="whitespace-nowrap flex-row py-4 pl-4 pr-3 text-sm font-semibold text-gray-900 sm:pl-0">
