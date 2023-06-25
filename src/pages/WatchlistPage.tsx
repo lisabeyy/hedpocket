@@ -44,7 +44,8 @@ export default function Watchlist({ addressRedirect, userAddress }: WatchlistPro
       try {
         const assets = await fetchAssets(walletAddress);
 
-        const hederaBalance = assets.body.balance.balance;
+         console.log('assets', assets);
+        const hederaBalance = assets.body.balance.balance.toLocaleString('en-US');
         return { ...entry, hederaBalance: hederaBalance };
       } catch (error) {
         console.log(`Error fetching assets for ${walletAddress}:`, error);
@@ -256,7 +257,7 @@ export default function Watchlist({ addressRedirect, userAddress }: WatchlistPro
 
                     <div className="text-sm font-medium leading-6 text-gray-900">
                       <Link to={`/wallet/${entry.walletAddress}`} className='hover:text-[#05ED9F]'>
-                        {entry.walletAddress.slice(0, 6)}...{entry.walletAddress.slice(-4)}
+                        {entry.walletAddress}
                       </Link>
                     </div>
 
@@ -312,8 +313,9 @@ export default function Watchlist({ addressRedirect, userAddress }: WatchlistPro
                     <dt className="text-gray-500">Amount</dt>
                     <dd className="flex items-start gap-x-2">
                       <div className="font-medium text-gray-900">
-                        {Number(entry.hederaBalance).toFixed(4)}
-                        <img className="rounded-full inline ml-2 mb-1" width={24} height={24} src='Venom' alt="" />
+                        {entry.hederaBalance}
+                        <img className="rounded-full inline ml-2 mb-1" width={24} height={24} src='https://www.saucerswap.finance/images/tokens/hbar.svg' alt="" />
+                         
                       </div>
                     </dd>
                   </div>

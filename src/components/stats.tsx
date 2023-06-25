@@ -31,6 +31,10 @@ export default function Stats({ address, userAddress }: StatsProps) {
   const [loading, setLoading] = useState<boolean>(true);
   const [loadingAsset, setLoadingAsset] = useState<boolean>(true);
 
+
+
+ 
+
   const getAssets = async (walletAddress) => {
     const response = await fetchAssets(walletAddress);
 

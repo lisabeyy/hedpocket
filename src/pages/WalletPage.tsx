@@ -43,7 +43,7 @@ export default function Wallet({ address, userAddress, onSetSearchAddress }) {
     <main className="py-10 bg-white h-full overflow-y-scroll">
     <div className="px-4 sm:px-6 lg:px-8">
 
-      <Stats address={address} userAddress={userCurrAddress} />
+      <Stats address={address || userCurrAddress} userAddress={userCurrAddress} />
     </div>
   </main>
   )
