@@ -75,7 +75,7 @@ const LineChart: FC<LineChartProps> = ({
 
 
     data = {
-      labels: transactions.map((t) => new Date(Number(t.consensus_timestamp).toFixed(0)).toLocaleDateString()),
+      labels: transactions.map((t) => new Date(Number(t.consensus_timestamp * 1000)).toLocaleDateString()),
       tension: 1,
       datasets: [
         {
