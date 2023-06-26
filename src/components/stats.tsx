@@ -144,8 +144,8 @@ export default function Stats({ address, userAddress }: StatsProps) {
       {!address && <>
 
         <h1 className='text-gray-800 mt-8 mb-8 text-center'>Welcome to  <img src={Logo} className="inline" width={120} alt="logo " /></h1>
-        <h2 className='text-black text-center mt-8'>Connect your wallet to start tracking your portfolio or search for a wallet address in the top bar.</h2>
-        <p  className='text-gray-700 text-center mt-2'>You can start by exploring  <Link to='/wallet/0.0.1163687'>this portfolio</Link></p>
+        <h2 className='text-gray-800 text-center mt-8 text-xl'>Connect your wallet to start tracking your portfolio or search for a wallet address in the top bar.</h2>
+        <p  className='text-gray-700 text-center mt-4 text-l'>You can start by exploring  <Link className='hover:text-[#05ED9F] text-black font-bold' to='/wallet/0.0.1163687'>this portfolio</Link></p>
       </>}
       {address &&
         <>
