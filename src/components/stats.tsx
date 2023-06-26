@@ -9,7 +9,7 @@ import { fetchAssets } from '../lib/hedera.api';
 import { getAmountWithDecimal, retrieveImage, retrieveToken } from '../utils/tokens.utils';
 import Logo from '../assets/HedPocket.svg';
 import AddToWatchlist from './AddToWatchlist';
-
+import { Link } from 'react-router-dom';
 let stats = [
   { id: 1, name: 'Wallet', stat: 0, value: 0, icon: CurrencyDollarIcon, change: '', changeType: '', colSpan: true, chart: true },
   { id: 2, stat: 'History', icon: ClockIcon, change: '', changeType: '', colSpan: false, history: true },]
@@ -145,6 +145,7 @@ export default function Stats({ address, userAddress }: StatsProps) {
 
         <h1 className='text-gray-800 mt-8 mb-8 text-center'>Welcome to  <img src={Logo} className="inline" width={120} alt="logo " /></h1>
         <h2 className='text-black text-center mt-8'>Connect your wallet to start tracking your portfolio or search for a wallet address in the top bar.</h2>
+        <p  className='text-gray-700 text-center mt-2'>You can start by exploring  <Link to='/wallet/0.0.1163687'>this portfolio</Link></p>
       </>}
       {address &&
         <>
